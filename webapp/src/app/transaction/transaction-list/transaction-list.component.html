@@ -1,0 +1,27 @@
+<div class="container mb-5 mt-0"><p>There are <strong>{{transactions.length}}</strong> transactions in our database.
+    Check them out below:</p></div>
+
+<div *ngFor="let transaction of transactions" class="container">
+
+    <div class="card card-body">
+
+        <div class="form-group row mb-0">
+            <label class="col-sm-2 col-form-label">Client</label>
+            <label class="col-sm-10 col-form-label">{{transaction.clientName}}</label>
+        </div>
+
+        <div class="form-group row mb-0">
+            <label class="col-sm-2 col-form-label">Book </label>
+            <label class="col-sm-10 col-form-label">{{transaction.bookAuthor}}: {{transaction.bookTitle}}</label>
+        </div>
+
+        <div class="form-group row mb-0">
+            <label class="col-sm-2 col-form-label">Details</label>
+            <label class="col-sm-10 col-form-label">{{transaction.details}}</label>
+        </div>
+
+    </div>
+
+    <br><br>
+
+</div>

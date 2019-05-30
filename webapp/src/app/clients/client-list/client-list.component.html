@@ -1,0 +1,52 @@
+<div class="container mb-5 mt-0"><p>There are <strong>{{clients.length}}</strong> clients in our database. Check them
+    out below:</p></div>
+
+<div *ngFor="let client of clients" class="container">
+
+    <div class="card">
+
+        <div class="card-header">
+            {{client.name}}
+        </div>
+
+        <div class="card-body">
+
+            <div class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">PersonalID</label>
+                <label class="col-sm-10 col-form-label">{{client.personalId}}</label>
+            </div>
+
+            <div class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">Email</label>
+                <label class="col-sm-10 col-form-label">{{client.email}}</label>
+            </div>
+
+            <div *ngIf="client.transactions.length != 0" class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">Purchases</label>
+            </div>
+            <div class="mb-3" *ngFor="let transaction of client.transactions">
+                <div class="form-group row mb-n2">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <label class="col-sm-2 col-form-label">Book</label>
+                    <label class="col-sm-8 col-form-label">{{transaction.bookAuthor}}: {{transaction.bookTitle}}</label>
+                </div>
+                <div class="form-group row mb-0">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <label class="col-sm-2 col-form-label">Details</label>
+                    <label class="col-sm-8 col-form-label">{{transaction.details}}</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-footer">
+            <button (click)="update(client.id)" class="btn btn-outline-info">Update</button>
+            <button (click)="delete(client.id)" class="btn btn-outline-danger ml-4">Remove</button>
+        </div>
+
+    </div>
+
+    <br><br>
+
+</div>
+

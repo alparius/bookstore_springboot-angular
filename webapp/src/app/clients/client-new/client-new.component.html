@@ -1,0 +1,20 @@
+<div class="container">
+    <form id="newclient">
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">PersonalID</label>
+            <input #personalId class="form-control col-sm-10" type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Name</label>
+            <input #name class="form-control col-sm-10" type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Email</label>
+            <input #email class="form-control col-sm-10" type="text">
+        </div>
+        <button class="btn btn-outline-danger" type="reset">Reset</button>
+        <button (click)="save(personalId.value,name.value,email.value)"
+                class="btn btn-outline-success ml-4">Save
+        </button>
+    </form>
+</div>

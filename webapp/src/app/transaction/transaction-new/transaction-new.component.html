@@ -1,0 +1,25 @@
+<div class="container">
+    <form id="newtransaction">
+
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Client</label>
+            <select id="client" class="form-control col-sm-10" [(ngModel)]="currentClient" name="client">
+                <option *ngFor="let client of clients" [ngValue]="client">{{client.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Book</label>
+            <select id="book" class="form-control col-sm-10" [(ngModel)]="currentBook" name="book">
+                <option *ngFor="let book of books" [ngValue]="book">{{book.author}}: {{book.title}}</option>
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Details</label>
+            <input #details class="form-control col-sm-10" type="text">
+        </div>
+        <button type=reset class="btn btn-outline-danger">Reset</button>
+        <button (click)="save(details.value)" class="btn btn-outline-success ml-4">Save</button>
+    </form>
+</div>

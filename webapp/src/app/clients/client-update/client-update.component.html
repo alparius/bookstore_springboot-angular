@@ -1,0 +1,22 @@
+<div *ngIf="client" class="container">
+    <form id="updateclient">
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">PersonalID</label>
+            <input [(ngModel)]="client.personalId" class="form-control col-sm-10" name="personalId"
+                   placeholder="{{client.personalId}}" type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Name</label>
+            <input [(ngModel)]="client.name" class="form-control col-sm-10" name="name" placeholder="{{client.name}}"
+                   type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Email</label>
+            <input [(ngModel)]="client.email" class="form-control col-sm-10" name="email" placeholder="{{client.email}}"
+                   type="text">
+        </div>
+        <button (click)="goBack()" class="btn btn-outline-danger">Abort Update</button>
+        <button (click)="save()" class="btn btn-outline-success ml-4">Commit Update
+        </button>
+    </form>
+</div>

@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand ml-5" routerLink="/index" routerLinkActive="active">Online Bookstore</a>
+    <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-5">
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                       data-toggle="dropdown" href="#" id="navbarDropdown1" role="button">Books</a>
+                    <div aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/books/list-books" routerLinkActive="active">List books</a>
+                        <a class="dropdown-item" routerLink="/books/new-book" routerLinkActive="active">Add book</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                       data-toggle="dropdown" href="#" id="navbarDropdown2" role="button">Clients</a>
+                    <div aria-labelledby="navbarDropdown2" class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/clients/list-clients" routerLinkActive="active">List clients</a>
+                        <a class="dropdown-item" routerLink="/clients/new-client" routerLinkActive="active">Add client</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                       data-toggle="dropdown" href="#" id="navbarDropdown3" role="button">Transactions</a>
+                    <div aria-labelledby="navbarDropdown3" class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/transactions/list-transactions" routerLinkActive="active">List transactions</a>
+                        <a class="dropdown-item" routerLink="/transactions/new-transaction" routerLinkActive="active">Add transaction</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown ml-5 pl-5">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                       data-toggle="dropdown" href="#" id="navbarDropdown4" role="button">Redux</a>
+                    <div aria-labelledby="navbarDropdown4" class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/books2/list-books" routerLinkActive="active">List books</a>
+                        <a class="dropdown-item" routerLink="/books2/new-book" routerLinkActive="active">Add book</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown mr-5 pr-5">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                       data-toggle="dropdown" href="#" id="navbarDropdown5" role="button">right</a>
+                    <div aria-labelledby="navbarDropdown5" class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="/books2/list-books" routerLinkActive="active">List books</a>
+                        <a class="dropdown-item" routerLink="/books2/new-book" routerLinkActive="active">Add book</a>
+                    </div>
+                </li>
+            </ul>
+    </div>
+</nav>

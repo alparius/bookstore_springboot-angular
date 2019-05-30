@@ -1,0 +1,28 @@
+<div class="container">
+    <form id="newbook">
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">ISBN</label>
+            <input #isbn class="form-control col-sm-10" type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Title</label>
+            <input #title class="form-control col-sm-10" type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Author</label>
+            <input #author class="form-control col-sm-10" type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Publisher</label>
+            <input #publisher class="form-control col-sm-10" type="text">
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-2">Price</label>
+            <input #price class="form-control col-sm-10" type="text">
+        </div>
+        <button class="btn btn-outline-danger" type="reset">Reset</button>
+        <button (click)="save(isbn.value, title.value, author.value, publisher.value, price.value)"
+                class="btn btn-outline-success ml-4">Save
+        </button>
+    </form>
+</div>

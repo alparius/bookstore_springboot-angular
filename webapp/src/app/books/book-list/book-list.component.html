@@ -1,0 +1,62 @@
+<div class="container mb-5 mt-0"><p>There are <strong>{{books.length}}</strong> books in our collection. Check them out
+    below:</p></div>
+
+<div *ngFor="let book of books" class="container">
+
+    <div class="card">
+
+        <div class="card-header">
+            {{book.title}}
+        </div>
+
+        <div class="card-body">
+
+            <div class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">ISBN</label>
+                <label class="col-sm-10 col-form-label">{{book.isbn}}</label>
+            </div>
+
+            <div class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">Author</label>
+                <label class="col-sm-10 col-form-label">{{book.author}}</label>
+            </div>
+
+            <div class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">Publisher</label>
+                <label class="col-sm-10 col-form-label">{{book.publisher}}</label>
+            </div>
+
+            <div class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">Price</label>
+                <label class="col-sm-10 col-form-label">{{book.price}}</label>
+            </div>
+
+            <div *ngIf="book.transactions.length != 0" class="form-group row mb-0">
+                <label class="col-sm-2 col-form-label">Purchased by</label>
+            </div>
+            <div class="mb-3" *ngFor="let transaction of book.transactions">
+                <div class="form-group row mb-n2">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <label class="col-sm-2 col-form-label">Client</label>
+                    <label class="col-sm-8 col-form-label">{{transaction.clientName}}</label>
+                </div>
+                <div class="form-group row mb-0">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <label class="col-sm-2 col-form-label">Details</label>
+                    <label class="col-sm-8 col-form-label">{{transaction.details}}</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-footer">
+            <button (click)="update(book.id)" class="btn btn-outline-info">Update</button>
+            <button (click)="delete(book.id)" class="btn btn-outline-danger ml-4">Remove</button>
+        </div>
+
+    </div>
+
+    <br><br>
+
+</div>
+
