@@ -2,6 +2,7 @@ package edu.mpp.bookstore2.web.controller;
 
 import edu.mpp.bookstore2.core.model.Book;
 import edu.mpp.bookstore2.core.service.AppService;
+import edu.mpp.bookstore2.core.service.AppServiceImpl;
 import edu.mpp.bookstore2.web.converter.BookConverter;
 import edu.mpp.bookstore2.web.dto.BookDto;
 import org.slf4j.Logger;

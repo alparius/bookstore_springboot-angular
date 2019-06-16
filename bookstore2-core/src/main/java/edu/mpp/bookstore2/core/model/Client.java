@@ -34,7 +34,7 @@ public class Client extends BaseEntity<Long> {
     private Set<Transaction> transactions;
 
     public Set<Transaction> getTransactions() {
-        this.transactions = this.transactions == null ? new HashSet<>() : this.transactions;
+        //this.transactions = this.transactions == null ? new HashSet<>() : this.transactions;
         return this.transactions;
     }
 

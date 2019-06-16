@@ -3,6 +3,6 @@ dependencies {
     dependencies {
         compile project(':bookstore2-core')
         implementation 'org.springframework.boot:spring-boot-starter-web'
-
+        //compile 'org.springframework.boot:spring-boot-starter-security'
     }
 }

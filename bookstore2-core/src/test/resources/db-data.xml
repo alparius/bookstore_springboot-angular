@@ -1,0 +1,6 @@
+<dataset>
+    <client id="-1" personalId="111" name="john" email="john@gmail.com"  />
+    <client id="-2" personalId="222" name="tom" email="tom@gmail.com"  />
+    <client id="-3" personalId="333" name="ann" email="ann@gmail.com"  />
+    <client id="-4" personalId="444" name="mary" email="mary@gmail.com"  />
+</dataset>

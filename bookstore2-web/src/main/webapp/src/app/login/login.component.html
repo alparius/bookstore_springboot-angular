@@ -1,0 +1,13 @@
+<div class="container w-25 mt-5">
+    <br><br><br><br>
+    <form id="login">
+        <div class="form-group text-center">
+            <input #username class="form-control" id="username" placeholder="username" type="text">
+        </div>
+        <div class="form-group text-center">
+            <input #password class="form-control" id="password" placeholder="password" type="password">
+        </div>
+
+        <button (click)="login(username.value,password.value)" class="btn btn-dark w-100">LOGIN</button>
+    </form>
+</div>
